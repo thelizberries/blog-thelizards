@@ -1,0 +1,73 @@
+﻿name: Translate and sync to English blog
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_posts/**.md'
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Italian repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false  # evita 403
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install googletrans==4.0.0-rc1
+
+      - name: Clone English repo
+        env:
+          PAT: ${{ secrets.PAT }}
+        run: |
+          git clone https://x-access-token:${PAT}@github.com/thelizards/blog-en.git
+
+      - name: Translate posts to English and copy
+        run: |
+          python3 .github/scripts/translate_and_copy.py
+
+      - name: Commit deleted images in Italian blog
+        env:
+          PAT: ${{ secrets.PAT }}
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          git add assets/images/posts
+          if git diff --cached --quiet; then
+            echo "No image deletions in Italian blog"
+          else
+            git commit -m "Auto-delete unused images"
+            git remote set-url origin https://x-access-token:${PAT}@github.com/thelizards/blog.git
+            git push origin HEAD:main
+          fi
+
+      - name: Configure git
+        run: |
+          cd blog-en
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+
+      - name: Commit and push changes if any
+        env:
+          PAT: ${{ secrets.PAT }}
+        run: |
+          cd blog-en
+          git add _posts assets/images/posts
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-translated new posts and sync images"
+            git pull --rebase origin main
+            git remote set-url origin https://x-access-token:${PAT}@github.com/thelizards/blog-en.git
+            git push origin HEAD:main
+          fi
+

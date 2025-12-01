@@ -1,0 +1,729 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lizards Blog - Guida Completa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+        }
+        
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .toc li {
+            margin-bottom: 10px;
+        }
+        
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .toc a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        .quick-guide {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+        }
+        
+        .steps {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .step {
+            margin-bottom: 20px;
+            padding-left: 15px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .success {
+            background: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            padding: 15px;
+            border-left: 4px solid #17a2b8;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "Courier New", monospace;
+            font-size: 0.9em;
+            color: #c7254e;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        pre code {
+            background: none;
+            color: #f8f8f2;
+            padding: 0;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .technical {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #dee2e6;
+        }
+        
+        footer {
+            background: #2d2d2d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #667eea;
+            color: white;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-left: 8px;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #e9ecef;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ðŸŽ¸ The Lizards Blog</h1>
+            <p>Guida Completa per la Creazione dei Post</p>
+        </header>
+        
+        <div class="content">
+            <div class="toc">
+                <h2><span class="emoji">ðŸ“‘</span>Indice</h2>
+                <ul>
+                    <li><a href="#guida-rapida">âš¡ Guida Rapida</a></li>
+                    <li><a href="#caricamento-immagini">ðŸ“¸ Caricamento Immagini</a></li>
+                    <li><a href="#struttura-blog">ðŸ“ Struttura del Blog</a></li>
+                    <li><a href="#creare-post">ðŸš€ Come Creare un Nuovo Post</a></li>
+                    <li><a href="#gestione-immagini">ðŸ–¼ï¸ Gestione delle Immagini</a></li>
+                    <li><a href="#pubblicare-post">ðŸ“¤ Pubblicare il Post</a></li>
+                    <li><a href="#traduzione">ðŸŒ Traduzione Automatica</a></li>
+                    <li><a href="#formattazione">âœï¸ Formattazione Markdown</a></li>
+                    <li><a href="#workflow">ðŸ”„ Workflow Completo</a></li>
+                    <li><a href="#faq">â“ Domande Frequenti</a></li>
+                    <li><a href="#tecnico">ðŸ”§ Informazioni Tecniche</a></li>
+                </ul>
+            </div>
+
+            <div id="guida-rapida" class="quick-guide">
+                <h2><span class="emoji">âš¡</span>GUIDA RAPIDA - Creare un Nuovo Post</h2>
+                <p><strong>Il modo piÃ¹ semplice per scrivere e pubblicare un post:</strong></p>
+                
+                <div class="steps">
+                    <div class="step">
+                        <h3>1ï¸âƒ£ Vai su <a href="https://blog.The Lizards.thelizards.it/upload.html" target="_blank">https://blog.The Lizards.thelizards.it/upload.html</a></h3>
+                    </div>
+                    <div class="step">
+                        <h3>2ï¸âƒ£ (Opzionale) Seleziona un'immagine per il post</h3>
+                        <p>L'immagine verrÃ  automaticamente ottimizzata (max 900x600px, WebP ~30-40KB)</p>
+                    </div>
+                    <div class="step">
+                        <h3>3ï¸âƒ£ Scrivi il titolo del post</h3>
+                        <p><strong>Esempio:</strong> "Nuovo Concerto a Milano"</p>
+                    </div>
+                    <div class="step">
+                        <h3>4ï¸âƒ£ Seleziona la data di pubblicazione</h3>
+                        <p>â° Puoi programmare post futuri! Il post verrÃ  pubblicato automaticamente il giorno indicato.</p>
+                    </div>
+                    <div class="step">
+                        <h3>5ï¸âƒ£ Scrivi il contenuto del post</h3>
+                        <p>Usa la toolbar per formattare il testo (grassetto, corsivo, titoli, liste)</p>
+                        <p>Inserisci <code>&lt;!--more--&gt;</code> per separare l'anteprima dal resto del contenuto</p>
+                        <p><strong>Suggerimento:</strong> Guarda l'anteprima in tempo reale sulla destra!</p>
+                    </div>
+                    <div class="step">
+                        <h3>6ï¸âƒ£ Inserisci la password</h3>
+                        <p>Richiedi la password al team tecnico se non ce l'hai</p>
+                    </div>
+                    <div class="step">
+                        <h3>7ï¸âƒ£ Clicca "Pubblica Post + Immagine"</h3>
+                    </div>
+                    <div class="step">
+                        <h3>8ï¸âƒ£ Fatto!</h3>
+                        <div class="success">
+                            Il post verrÃ  pubblicato automaticamente:<br>
+                            âœ… Blog italiano: 1-2 minuti<br>
+                            ðŸŒ Blog inglese (tradotto): 2-3 minuti
+                        </div>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <h3 style="margin-top: 30px;">âœï¸ Per Modificare un Post Esistente</h3>
+                <p>Per modificare post giÃ  pubblicati, usa <a href="https://prose.io/" target="_blank">Prose.io</a>:</p>
+                <ol>
+                    <li>Vai su <a href="https://prose.io/" target="_blank">https://prose.io/</a></li>
+                    <li>Fai login con GitHub</li>
+                    <li>Seleziona il repository "blog"</li>
+                    <li>Clicca sulla cartella "_posts"</li>
+                    <li>Seleziona il post da modificare</li>
+                    <li>Modifica e salva</li>
+                </ol>
+            </div>
+
+            <div id="caricamento-immagini">
+                <h2><span class="emoji">ðŸ“¸</span>Caricamento Immagini</h2>
+                
+                <div class="alert alert-info" style="background: #d1ecf1; padding: 15px; border-left: 4px solid #17a2b8; border-radius: 4px; margin: 20px 0;">
+                    <strong>ðŸ’¡ NovitÃ :</strong> Ora puoi caricare immagini direttamente durante la creazione del post! Usa l'<a href="https://blog.The Lizards.thelizards.it/upload.html">editor unificato</a> per tutto in un solo posto.
+                </div>
+                
+                <h3>METODO 1: Editor Unificato (CONSIGLIATO) ðŸŽ¯</h3>
+                <div class="highlight">
+                    <p><strong>Carica immagini e crea post nello stesso posto:</strong></p>
+                    <ol>
+                        <li><strong>Vai al link:</strong> <a href="https://blog.The Lizards.thelizards.it/upload.html" target="_blank">https://blog.The Lizards.thelizards.it/upload.html</a></li>
+                        <li><strong>Seleziona l'immagine</strong> (formati supportati: <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>)</li>
+                        <li><strong>Scrivi il post</strong> con titolo, data e contenuto</li>
+                        <li><strong>Vedi l'anteprima</strong> in tempo reale</li>
+                        <li><strong>Inserisci la password</strong> e pubblica tutto insieme!</li>
+                    </ol>
+                </div>
+                
+                <div class="success">
+                    <strong>âœ… Vantaggi:</strong>
+                    <ul>
+                        <li><strong>Tutto in un solo posto</strong>: immagine + post insieme</li>
+                        <li><strong>Anteprima live</strong>: vedi come apparirÃ  il post mentre scrivi</li>
+                        <li>Toolbar Markdown per formattazione facile</li>
+                        <li>Ottimizzazione automatica immagini (max 900x600px, WebP ~30-40KB)</li>
+                        <li>100% gratuito (Cloudflare Workers: 100.000 richieste/giorno)</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <h3>METODO 2: Tramite GitHub (per utenti esperti)</h3>
+                <ol>
+                    <li><strong>Prima di scrivere il post</strong>, carica le immagini:
+                        <ul>
+                            <li>Vai su <a href="https://github.com/theThe Lizards/blog" target="_blank">https://github.com/theThe Lizards/blog</a></li>
+                            <li>Naviga nella cartella <code>assets/images/posts/</code></li>
+                            <li>Clicca "Add file" â†’ "Upload files"</li>
+                            <li>Trascina le tue immagini (qualsiasi formato: <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>)</li>
+                            <li>Clicca "Commit changes"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Attendi 1-2 minuti:</strong> Le immagini verranno <strong>convertite automaticamente in formato <code>.webp</code></strong> (ottimizzato per il web)</li>
+                    <li><strong>Poi scrivi il post</strong> usando l'editor unificato o Prose.io</li>
+                </ol>
+
+                <div class="info">
+                    <strong>ðŸ“ Nota:</strong> Le immagini verranno copiate automaticamente anche nel blog inglese durante la traduzione!
+                </div>
+
+                <div class="highlight">
+                    <strong>â±ï¸ Tempi di pubblicazione:</strong>
+                    <ul>
+                        <li>Il post appare sul blog italiano in 1-2 minuti (se la data Ã¨ oggi o passata)</li>
+                        <li>Dopo altri 1-2 minuti appare tradotto automaticamente sul blog inglese</li>
+                        <li><strong>Post programmati:</strong> I post con data futura verranno pubblicati automaticamente il giorno indicato</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>DOCUMENTAZIONE PER UTENTI TECNICI</h2>
+
+            <div id="struttura-blog">
+                <h2><span class="emoji">ðŸ“</span>Struttura del Blog</h2>
+                <p>Il blog Ã¨ costruito con <strong>Jekyll</strong> e <strong>GitHub Pages</strong>. I post vengono scritti in formato Markdown e pubblicati automaticamente su:</p>
+                <ul>
+                    <li><strong>Blog Italiano:</strong> <a href="https://blog.The Lizards.thelizards.it" target="_blank">https://blog.The Lizards.thelizards.it</a></li>
+                    <li><strong>Blog Inglese:</strong> <a href="https://blog-en.The Lizards.thelizards.it" target="_blank">https://blog-en.The Lizards.thelizards.it</a> (tradotto automaticamente)</li>
+                </ul>
+            </div>
+
+            <div id="creare-post">
+                <h2><span class="emoji">ðŸš€</span>Come Creare un Nuovo Post</h2>
+                
+                <h3>1. Creare il File del Post</h3>
+                <p>I post vanno creati nella cartella <code>_posts/</code> con questa convenzione di naming:</p>
+                <pre><code>YYYY-MM-DD-titolo-del-post.md</code></pre>
+                <p><strong>Esempio:</strong> <code>2025-11-15-nuovo-concerto-milano.md</code></p>
+                
+                <div class="highlight">
+                    <strong>âš ï¸ Importante:</strong>
+                    <ul>
+                        <li>La data deve essere in formato <code>YYYY-MM-DD</code> (anno-mese-giorno)</li>
+                        <li>Il titolo deve usare trattini <code>-</code> al posto degli spazi</li>
+                        <li>L'estensione deve essere <code>.md</code></li>
+                    </ul>
+                </div>
+
+                <h3>2. Struttura del Post</h3>
+                <p>Ogni post deve iniziare con il <strong>front matter</strong> (metadati racchiusi tra <code>---</code>):</p>
+                
+                <h4>Post SENZA immagine:</h4>
+                <pre><code>---
+layout: post
+title: "Titolo del Post"
+date: 2025-11-15
+---
+
+Inserisci qui il testo del post...
+
+&lt;!--more--&gt;
+
+Continua con il resto del contenuto...</code></pre>
+
+                <h4>Post CON immagine:</h4>
+                <pre><code>---
+layout: post
+title: "Titolo del Post"
+date: 2025-11-15
+image: /assets/images/posts/nome-immagine.webp
+---
+
+Inserisci qui il testo del post...
+
+&lt;!--more--&gt;
+
+Continua con il resto del contenuto...</code></pre>
+
+                <h3>3. Componenti del Front Matter</h3>
+                <ul>
+                    <li><strong>layout:</strong> Sempre <code>post</code> (obbligatorio)</li>
+                    <li><strong>title:</strong> Il titolo del post tra virgolette (obbligatorio)</li>
+                    <li><strong>date:</strong> La data nel formato <code>YYYY-MM-DD</code> (obbligatorio)
+                        <ul>
+                            <li>Puoi usare date future per programmare la pubblicazione</li>
+                            <li>I post con data futura non appariranno sul blog fino a quel giorno</li>
+                        </ul>
+                    </li>
+                    <li><strong>image:</strong> Percorso dell'immagine di anteprima (opzionale)</li>
+                </ul>
+
+                <h3>4. Tag &lt;!--more--&gt;</h3>
+                <p>Il tag <code>&lt;!--more--&gt;</code> separa l'anteprima (excerpt) dal resto del contenuto:</p>
+                <ul>
+                    <li>Il testo <strong>prima</strong> del tag appare nella home del blog come anteprima</li>
+                    <li>Il testo <strong>dopo</strong> il tag appare solo nell'articolo completo</li>
+                </ul>
+            </div>
+
+            <div id="gestione-immagini">
+                <h2><span class="emoji">ðŸ–¼ï¸</span>Gestione delle Immagini</h2>
+                
+                <h3>Caricare Immagini - Metodo Form di Upload (Consigliato)</h3>
+                <p><strong>Il modo piÃ¹ semplice per caricare immagini:</strong></p>
+                <ol>
+                    <li><strong>Vai su:</strong> <a href="https://blog.The Lizards.thelizards.it/upload.html" target="_blank">https://blog.The Lizards.thelizards.it/upload.html</a></li>
+                    <li><strong>Inserisci la password</strong> (richiedila al team tecnico se non ce l'hai)</li>
+                    <li><strong>Seleziona l'immagine</strong> dal tuo computer
+                        <ul>
+                            <li>Formati supportati: <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code></li>
+                            <li>Nome file: usa nomi descrittivi con trattini (es: <code>concerto-milano-2025.jpg</code>)</li>
+                            <li>Dimensioni: qualsiasi (verranno ottimizzate automaticamente)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Visualizza l'anteprima</strong> e le dimensioni del file</li>
+                    <li><strong>Clicca "Carica Immagine"</strong></li>
+                    <li><strong>Attendi 1-2 minuti:</strong> L'immagine viene caricata e automaticamente:
+                        <ul>
+                            <li>Ridimensionata a max <strong>900x600px</strong> (mantenendo proporzioni)</li>
+                            <li>Convertita in formato <strong>WebP</strong> ottimizzato</li>
+                            <li>Compressa a circa <strong>30-40KB</strong> per caricamento veloce</li>
+                        </ul>
+                    </li>
+                    <li><strong>Copia il nome WebP</strong> mostrato nel messaggio di successo (es: <code>concerto-milano-2025.webp</code>)</li>
+                    <li><strong>Usa nel post</strong> il percorso: <code>/assets/images/posts/concerto-milano-2025.webp</code></li>
+                </ol>
+
+                <div class="success">
+                    <strong>âœ… Vantaggi:</strong>
+                    <ul>
+                        <li>Non serve account GitHub</li>
+                        <li>Interfaccia semplice e intuitiva</li>
+                        <li>Anteprima prima del caricamento</li>
+                        <li><strong>Ottimizzazione automatica</strong> (ridimensionamento + compressione)</li>
+                        <li>Controllo duplicati automatico</li>
+                        <li>Conversione WebP automatica</li>
+                        <li><strong>100% gratuito:</strong> Cloudflare Workers offre 100.000 richieste/giorno senza limiti di credito</li>
+                    </ul>
+                </div>
+
+                <h3>Immagine di Default</h3>
+                <p>Se non specifichi un'immagine, verrÃ  usato automaticamente il logo dei The Lizards.</p>
+            </div>
+
+            <div id="traduzione">
+                <h2><span class="emoji">ðŸŒ</span>Traduzione Automatica e Sincronizzazione</h2>
+                <p>Quando lavori con i post in italiano, il sistema gestisce <strong>automaticamente</strong> la traduzione e la sincronizzazione con il blog inglese.</p>
+
+                <h3>âœ¨ Creazione di un Nuovo Post</h3>
+                <p>Quando pubblichi un post in italiano:</p>
+                <ol>
+                    <li><strong>GitHub Actions</strong> rileva il nuovo post</li>
+                    <li>Lo <strong>traduce automaticamente</strong> in inglese usando Google Translate</li>
+                    <li><strong>Copia automaticamente le immagini</strong> referenziate nel post al blog inglese</li>
+                    <li>Lo pubblica sul blog inglese con:
+                        <ul>
+                            <li>Titolo tradotto</li>
+                            <li>Contenuto tradotto</li>
+                            <li>Nome file tradotto (SEO-friendly slug inglese)</li>
+                            <li>Immagini copiate in <code>assets/images/posts/</code></li>
+                            <li>Campo <code>original_file</code> che traccia il post italiano di origine</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p><strong>â±ï¸ La traduzione richiede circa 1-2 minuti dopo il push.</strong></p>
+
+                <h3>ðŸ”„ Modifica di un Post Esistente</h3>
+                <div class="success">
+                    <strong>Tutto viene aggiornato automaticamente!</strong> Quando modifichi un post italiano esistente:
+                </div>
+                <ol>
+                    <li>Il sistema <strong>rileva la modifica</strong> confrontando la lunghezza del contenuto</li>
+                    <li><strong>Cancella il vecchio post inglese</strong> (qualsiasi fosse il nome)</li>
+                    <li><strong>Crea un nuovo post inglese</strong> con:
+                        <ul>
+                            <li>Nuovo titolo tradotto (se lo hai modificato)</li>
+                            <li>Nuova data (se l'hai modificata nel filename)</li>
+                            <li>Contenuto aggiornato e tradotto</li>
+                            <li>Immagini aggiornate (se le hai cambiate)</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="info">
+                    <strong>âš ï¸ Importante:</strong> Il sistema usa il campo <code>original_file</code> nel front matter del post inglese per tracciare quale post italiano corrisponde. Anche se cambi titolo o data, il sistema trova sempre il post inglese corretto da aggiornare.
+                </div>
+
+                <h3>ðŸ—‘ï¸ Cancellazione di un Post</h3>
+                <p>Quando elimini un post italiano:</p>
+                <ol>
+                    <li>Il post inglese corrispondente viene <strong>cancellato automaticamente</strong></li>
+                    <li>Le <strong>immagini associate</strong> vengono <strong>cancellate automaticamente</strong> sia dal blog italiano che da quello inglese</li>
+                    <li><strong>SOLO SE</strong> l'immagine non Ã¨ usata in altri post (controllo di sicurezza)</li>
+                </ol>
+
+                <div class="info">
+                    <strong>ðŸ“ Nota:</strong> Non modificare manualmente i post o le immagini nel repository blog-en! Tutto viene gestito automaticamente dal workflow di traduzione.
+                </div>
+            </div>
+
+            <div id="formattazione">
+                <h2><span class="emoji">âœï¸</span>Esempi di Formattazione Markdown</h2>
+                
+                <h3>Titoli</h3>
+                <pre><code>## Titolo di Sezione
+### Sottotitolo</code></pre>
+
+                <h3>Testo</h3>
+                <pre><code>**Grassetto**
+*Corsivo*
+[Link](https://www.example.com)</code></pre>
+
+                <h3>Liste</h3>
+                <pre><code>- Elemento 1
+- Elemento 2
+- Elemento 3</code></pre>
+
+                <h3>Liste Numerate</h3>
+                <pre><code>1. Primo punto
+2. Secondo punto
+3. Terzo punto</code></pre>
+
+                <h3>Citazioni</h3>
+                <pre><code>> Questa Ã¨ una citazione</code></pre>
+
+                <h3>Immagini nel Contenuto</h3>
+                <pre><code>![Descrizione immagine](/assets/images/posts/nome-immagine.webp)</code></pre>
+            </div>
+
+            <div id="workflow">
+                <h2><span class="emoji">ðŸ”„</span>Workflow Completo</h2>
+                
+                <h3>Creare un Nuovo Post (METODO SEMPLICE)</h3>
+                <ol>
+                    <li>ðŸŒ Vai su <a href="https://blog.The Lizards.thelizards.it/upload.html" target="_blank">https://blog.The Lizards.thelizards.it/upload.html</a></li>
+                    <li>ðŸ–¼ï¸ (Opzionale) Seleziona un'immagine</li>
+                    <li>âœï¸ Scrivi titolo, data e contenuto</li>
+                    <li>ðŸ‘ï¸ Controlla l'anteprima in tempo reale</li>
+                    <li>ðŸ” Inserisci la password</li>
+                    <li>ðŸ“¤ Clicca "Pubblica Post + Immagine"</li>
+                    <li>â³ Attendi 1-2 minuti per la pubblicazione</li>
+                    <li>âœ… Il post appare sul <strong>blog italiano</strong></li>
+                    <li>ðŸŒ Dopo altri 1-2 minuti, appare <strong>tradotto automaticamente</strong> sul blog inglese</li>
+                </ol>
+
+                <h3>Modificare un Post Esistente</h3>
+                <ol>
+                    <li>ðŸŒ Vai su <a href="https://prose.io/" target="_blank">https://prose.io/</a></li>
+                    <li>ðŸ” Fai login con GitHub</li>
+                    <li>ðŸ“ Seleziona repository "blog" â†’ cartella "_posts"</li>
+                    <li>âœï¸ Seleziona il post da modificare</li>
+                    <li>ðŸ“ Modifica titolo, data, contenuto o immagine</li>
+                    <li>ðŸ’¾ Clicca "Save"</li>
+                    <li>â³ Attendi 1-2 minuti</li>
+                    <li>âœ… Il post viene <strong>aggiornato</strong> sul blog italiano</li>
+                    <li>ðŸ”„ Il sistema <strong>rileva la modifica</strong> e aggiorna automaticamente il post inglese</li>
+                </ol>
+
+                <h3>Eliminare un Post</h3>
+                <ol>
+                    <li>ðŸŒ Vai su <a href="https://github.com/theThe Lizards/blog" target="_blank">https://github.com/theThe Lizards/blog</a></li>
+                    <li>ðŸ“ Naviga nella cartella <code>_posts/</code></li>
+                    <li>ðŸ—‘ï¸ Elimina il file del post</li>
+                    <li>ðŸ’¾ Fai commit</li>
+                    <li>â³ Attendi 1-2 minuti</li>
+                    <li>âœ… Il post viene <strong>rimosso</strong> dal blog italiano</li>
+                    <li>ðŸ”„ Il sistema elimina automaticamente il post inglese e le immagini associate</li>
+                </ol>
+            </div>
+
+            <div id="faq">
+                <h2><span class="emoji">â“</span>Domande Frequenti</h2>
+                
+                <h3>Come modifico un post giÃ  pubblicato?</h3>
+                <ol>
+                    <li>Modifica il file in <code>_posts/</code> (puoi cambiare titolo, data, contenuto, immagini)</li>
+                    <li>Fai commit e push</li>
+                    <li>Il post verrÃ  aggiornato automaticamente <strong>sia nel blog italiano che in quello inglese</strong></li>
+                    <li>Se hai modificato il titolo o la data, il post inglese verrÃ  rinominato automaticamente</li>
+                </ol>
+                <div class="info">
+                    <strong>ðŸ“ Nota:</strong> Non serve toccare il blog inglese, tutto viene sincronizzato automaticamente!
+                </div>
+
+                <h3>Come elimino un post?</h3>
+                <ol>
+                    <li>Elimina il file dalla cartella <code>_posts/</code></li>
+                    <li>Fai commit e push</li>
+                    <li>Il post verrÃ  rimosso <strong>automaticamente</strong> sia dal blog italiano che da quello inglese</li>
+                    <li>Le immagini associate verranno cancellate da entrambi i blog (se non usate in altri post)</li>
+                </ol>
+
+                <h3>Posso usare HTML nel post?</h3>
+                <p>SÃ¬! Markdown supporta anche HTML, quindi puoi usare tag HTML quando necessario.</p>
+
+                <h3>Posso programmare post per il futuro?</h3>
+                <p>SÃ¬! Puoi impostare una data futura nel front matter del post (es: <code>date: 2025-12-25</code>). Il post verrÃ  pubblicato automaticamente il giorno indicato. Fino a quella data, il post non sarÃ  visibile sul blog, ma sarÃ  giÃ  presente nel repository GitHub.</p>
+
+                <h3>Come vedo l'anteprima prima di pubblicare?</h3>
+                <p><strong>Metodo consigliato:</strong> Usa l'<a href="https://blog.The Lizards.thelizards.it/upload.html" target="_blank">editor unificato</a> che mostra l'anteprima in tempo reale mentre scrivi!</p>
+                <p>In alternativa, puoi usare un editor Markdown online come:</p>
+                <ul>
+                    <li><a href="https://dillinger.io/" target="_blank">https://dillinger.io/</a></li>
+                    <li><a href="https://stackedit.io/" target="_blank">https://stackedit.io/</a></li>
+                </ul>
+
+                <h3>Come ottengo la password per pubblicare?</h3>
+                <p>La password Ã¨ <strong>riservata ai membri del team</strong> che devono creare post. Contatta il team tecnico (Mattia) per ottenerla. La password Ã¨ configurata in modo sicuro sul server e non Ã¨ visibile pubblicamente.</p>
+            </div>
+
+            <div id="tecnico" class="technical">
+                <h2><span class="emoji">ðŸ”§</span>Informazioni Tecniche (Solo per Amministratori)</h2>
+                
+                <h3>Form di Upload Immagini</h3>
+                <p>Il sistema di upload Ã¨ implementato con:</p>
+                <ul>
+                    <li><strong>Frontend:</strong> Form HTML accessibile su <a href="https://blog.The Lizards.thelizards.it/upload.html" target="_blank">https://blog.The Lizards.thelizards.it/upload.html</a></li>
+                    <li><strong>Backend:</strong> Cloudflare Worker serverless (<a href="https://The Lizards-blog-upload.The Lizards.workers.dev" target="_blank">https://The Lizards-blog-upload.The Lizards.workers.dev</a>)</li>
+                    <li><strong>Autenticazione:</strong> Password protetta tramite variabile d'ambiente <code>UPLOAD_PASSWORD</code></li>
+                    <li><strong>Storage:</strong> GitHub API - carica direttamente nel repository <code>theThe Lizards/blog</code></li>
+                    <li><strong>Ottimizzazione immagini:</strong>
+                        <ul>
+                            <li>Ridimensionamento automatico a max 900x600px (mantenendo proporzioni)</li>
+                            <li>Conversione in formato WebP</li>
+                            <li>Compressione con qualitÃ  75 e metodo 6 (massima compressione)</li>
+                            <li>Dimensione finale: ~30-40KB per caricamento rapido</li>
+                        </ul>
+                    </li>
+                    <li><strong>Sicurezza:</strong>
+                        <ul>
+                            <li>Validazione formato file server-side</li>
+                            <li>Controllo duplicati automatico</li>
+                            <li>Token GitHub con scope limitato (<code>repo</code> only)</li>
+                            <li>Password hash non committata nel repository</li>
+                        </ul>
+                    </li>
+                    <li><strong>Vantaggi Cloudflare:</strong>
+                        <ul>
+                            <li>100% gratuito: 100.000 richieste/giorno senza limiti di credito</li>
+                            <li>Nessuna carta di credito richiesta</li>
+                            <li>Deploy globale su edge network</li>
+                            <li>Zero downtime</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Configurazione variabili d'ambiente su Cloudflare</h3>
+                <ol>
+                    <li>Dashboard Cloudflare: Workers & Pages â†’ The Lizards-blog-upload â†’ Settings â†’ Variables</li>
+                    <li><code>UPLOAD_PASSWORD</code>: Password per il form di upload â†’ Encrypt â†’ Save</li>
+                    <li><code>GITHUB_TOKEN</code>: Personal Access Token con scope <code>repo</code> (token name "Blog Image Upload") â†’ Encrypt â†’ Save</li>
+                </ol>
+
+                <h3>Manutenzione</h3>
+                <ul>
+                    <li><strong>Per cambiare la password:</strong> Cloudflare Dashboard â†’ Workers & Pages â†’ The Lizards-blog-upload â†’ Settings â†’ Variables</li>
+                    <li><strong>Per rigenerare il token GitHub:</strong> <a href="https://github.com/settings/tokens" target="_blank">https://github.com/settings/tokens</a></li>
+                    <li><strong>Per modificare il codice:</strong> Cloudflare Dashboard â†’ Workers & Pages â†’ The Lizards-blog-upload â†’ Edit Code</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>Per qualsiasi dubbio o problema, contatta il team tecnico (Mattia)! ðŸŽµ</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Â© 2025 The Lizards - The Cranberries Tribute Band</p>
+        </footer>
+    </div>
+</body>
+</html>

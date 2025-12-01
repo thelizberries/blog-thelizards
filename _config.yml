@@ -1,0 +1,31 @@
+﻿title: "The Lizards Blog"
+description: "Novità, dietro le quinte e curiosità dal mondo The Lizards"
+url: "https://blog.thelizards.it"
+author:
+  name: "The Lizards Team"
+  email: "info@thelizards.it"
+theme: minima
+show_excerpts: true
+lang: it_IT
+
+# Impostazioni di paginazione
+paginate: 5
+paginate_path: "/page:num/"
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-paginate
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      image: "/assets/images/The-Lizards-Logo_small.png"
+      layout: post
+      lang: "it"
+
+#test

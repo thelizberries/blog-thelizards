@@ -1,0 +1,95 @@
+name: Convert Images to WebP
+
+on:
+  push:
+    paths:
+      - 'assets/images/posts/**'
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  convert-images:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Checkout English blog repository
+        uses: actions/checkout@v3
+        with:
+          repository: thelizberries/blog-lizberries-en
+          path: blog-en
+          token: ${{ secrets.PAT }}
+      
+      - name: Install WebP tools
+        run: sudo apt-get update && sudo apt-get install -y webp imagemagick
+      
+      - name: Convert new/modified images to WebP
+        run: |
+          # Trova tutte le immagini non-webp in assets/images/posts
+          find assets/images/posts -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) 2>/dev/null | while read img; do
+            # Ottieni il percorso senza estensione
+            base="${img%.*}"
+            webp_file="${base}.webp"
+            
+            # Converti solo se il file webp non esiste o è più vecchio dell'originale
+            if [ ! -f "$webp_file" ] || [ "$img" -nt "$webp_file" ]; then
+              echo "Converting $img to WebP..."
+              echo "Original size: $(du -h "$img" | cut -f1)"
+              
+              # Step 1: Ridimensiona a max 900x600 mantenendo proporzioni
+              temp_resized="${base}_resized.${img##*.}"
+              convert "$img" -resize '900x600>' -quality 92 "$temp_resized"
+              echo "Resized to max 900x600px"
+              
+              # Step 2: Converti in WebP con alta compressione
+              if cwebp -q 75 -m 6 -af "$temp_resized" -o "$webp_file"; then
+                webp_size=$(du -h "$webp_file" | cut -f1)
+                echo "Successfully converted to WebP: $webp_size"
+                
+                # Copia il file webp nel blog inglese
+                dest_file="blog-en/${webp_file}"
+                mkdir -p "$(dirname "$dest_file")"
+                cp "$webp_file" "$dest_file"
+                echo "Copied $webp_file to blog-en"
+                
+                # Rimuovi i file temporanei e originali
+                rm "$temp_resized"
+                rm "$img"
+                echo "Removed original file $img"
+              else
+                echo "Error converting $img, keeping original file"
+                rm -f "$temp_resized"
+              fi
+            fi
+          done
+      
+      - name: Commit converted images
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A assets/images/posts/
+          git diff --staged --quiet || git commit -m "Convert images to WebP format and remove originals [skip ci]"
+          git pull --rebase origin main || true
+      
+      - name: Commit and push to English blog
+        run: |
+          cd blog-en
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add assets/images/posts/
+          git diff --staged --quiet || git commit -m "Add converted WebP images from Italian blog [skip ci]"
+          git pull --rebase origin main
+          git push
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
