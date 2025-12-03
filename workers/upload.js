@@ -52,7 +52,7 @@ export default {
       } else if (action === 'create_post') {
         return await handlePostCreation(requestData, GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, corsHeaders);
       } else {
-        // CompatibilitÃ  con vecchia versione (senza action)
+        // Compatibilità  con vecchia versione (senza action)
         return await handleImageUpload(requestData, GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, corsHeaders);
       }
 
@@ -93,7 +93,7 @@ async function handleImageUpload(data, GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, 
 
   const GITHUB_PATH = `assets/images/posts/${filename}`;
 
-  // Verifica se il file esiste giÃ 
+  // Verifica se il file esiste già 
   const checkUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}`;
   const checkResponse = await fetch(checkUrl, {
     headers: {
@@ -106,7 +106,7 @@ async function handleImageUpload(data, GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, 
   if (checkResponse.ok) {
     return new Response(
       JSON.stringify({ 
-        error: `Un file con il nome "${filename}" esiste giÃ . Rinominalo e riprova.` 
+        error: `Un file con il nome "${filename}" esiste già. Rinominalo e riprova.` 
       }),
       { 
         status: 409,
@@ -180,7 +180,7 @@ async function handlePostCreation(data, GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO,
 
   const GITHUB_PATH = `_posts/${filename}`;
 
-  // Verifica se il post esiste giÃ 
+  // Verifica se il post esiste già
   const checkUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_PATH}`;
   const checkResponse = await fetch(checkUrl, {
     headers: {
@@ -193,7 +193,7 @@ async function handlePostCreation(data, GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO,
   if (checkResponse.ok) {
     return new Response(
       JSON.stringify({ 
-        error: `Un post con il nome "${filename}" esiste giÃ . Modifica il titolo o la data.` 
+        error: `Un post con il nome "${filename}" esiste già. Modifica il titolo o la data.` 
       }),
       { 
         status: 409,
