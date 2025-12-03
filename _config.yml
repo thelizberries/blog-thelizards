@@ -9,8 +9,8 @@ show_excerpts: true
 lang: it_IT
 
 # Impostazioni di paginazione
-paginate: 5
-paginate_path: "/page:num/"
+#paginate: 5
+#paginate_path: "/page:num/"
 
 sass:
   style: compressed
