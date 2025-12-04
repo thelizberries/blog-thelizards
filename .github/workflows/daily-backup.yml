@@ -37,7 +37,7 @@ jobs:
           # Crea un file con informazioni sul backup
           cat > .backup-info.txt << EOF
           ========================================
-          BACKUP AUTOMATICO DEL BLOG LIZBERRIES
+          BACKUP AUTOMATICO DEL BLOG THE LIZARDS
           ========================================
           
           Data backup: ${{ steps.backup_info.outputs.date }}
