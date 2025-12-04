@@ -6,12 +6,12 @@ import shutil
 translator = Translator()
 
 src_dir = Path("_posts")
-dest_dir = Path("blog-thelizards-en/_posts")
+dest_dir = Path("blog-en/_posts")
 dest_dir.mkdir(parents=True, exist_ok=True)
 
 # Directory per le immagini
 src_images_dir = Path("assets/images/posts")
-dest_images_dir = Path("blog-thelizards-en/assets/images/posts")
+dest_images_dir = Path("blog-en/assets/images/posts")
 dest_images_dir.mkdir(parents=True, exist_ok=True)
 
 def slugify_english(text):
