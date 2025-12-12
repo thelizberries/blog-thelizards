@@ -2,7 +2,7 @@
 layout: post
 title: "Strange Dream: Una Guida verso la luce - Il nuovo singolo dei The Lizards"
 date: 2025-12-12
-description: "Meta Description: Lasciati guidare da un elfa in questo viaggio di trasformazione interiore in una cornice irlandese."
+description: "Lasciati guidare da un elfa in questo viaggio di trasformazione interiore in una cornice irlandese."
 image: /assets/images/posts/Screenshot 1.webp
 ---
 
