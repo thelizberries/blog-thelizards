@@ -47,4 +47,4 @@ Mettendo in dialogo le loro due voci – maschile e femminile – che diventano 
 
 Ci ricordano che, se abbiamo il coraggio di continuare a camminare, il destino sa condurci verso paesaggi di luce, natura incontaminata e autentica pace interiore.
 
-🎵 Ascolta il brano in anteprima su **<a href="https://open.spotify.com/track/4m0zBlX768a45bFDQsTiIC?si=HZO_NRgbQ4KILGmLFMjToQ" target="_blank" rel="noopener">Spotify</a>** e guarda il video ufficiale su **<a href="https://youtu.be/J5zimQWIO0Y?si=3Z7TYfQyHunqBRsb" target="_blank" rel="noopener">YouTube</a>** 🎬
+🎵 Ascolta il brano in anteprima su **<a href="https://open.spotify.com/track/4m0zBlX768a45bFDQsTiIC?si=HZO_NRgbQ4KILGmLFMjToQ" target="_blank" rel="noopener" style="text-decoration: underline;">Spotify</a>** e guarda il video ufficiale su **<a href="https://youtu.be/J5zimQWIO0Y?si=3Z7TYfQyHunqBRsb" target="_blank" rel="noopener" style="text-decoration: underline;">YouTube</a>** 🎬
