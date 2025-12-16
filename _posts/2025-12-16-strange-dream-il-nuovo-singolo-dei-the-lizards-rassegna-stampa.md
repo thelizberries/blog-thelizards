@@ -6,13 +6,13 @@ description: 'Strange Dream è il nuovo singolo dei The Lizards: un brano rock i
 image: /assets/images/posts/SD-copertina quadrata.webp
 ---
 
-
 <p>
-L’uscita di <em>Strange Dream</em>, nuovo singolo dei <strong>The Lizards</strong>, ha ricevuto attenzione da numerosi portali musicali e culturali italiani, che hanno raccontato il brano da prospettive differenti.
-</p>
+L’uscita di <em>Strange Dream</em>, nuovo singolo dei <strong>The Lizards</strong>, ha ricevuto 
 
 <!--more-->
 
+attenzione da numerosi portali musicali e culturali italiani, che hanno raccontato il brano da prospettive differenti.
+</p>
 
 <ul>
   <li>
