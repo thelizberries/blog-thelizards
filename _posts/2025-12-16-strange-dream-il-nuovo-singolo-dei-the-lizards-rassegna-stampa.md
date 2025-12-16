@@ -138,7 +138,7 @@ L’uscita di <em>Strange Dream</em>, nuovo singolo dei <strong>The Lizards</str
   </li>
 </ul>
 
-<p>Il singolo <em>Strange Dream<em> è anche disponibile su tutte le principali piattaforme di streaming e digital store.
+<p>Il singolo <em>Strange Dream</em> è anche disponibile su tutte le principali piattaforme di streaming e digital store.
 
 👉 Ascolta <a href="https://orcd.co/thelizards-strangedream" target="_blank" rel="noopener" style="text-decoration: underline;">Strange Dream</a> sulle piattaforme ufficiali.
 </p>
