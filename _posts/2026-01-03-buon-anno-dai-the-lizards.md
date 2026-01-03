@@ -1,9 +1,9 @@
 ---
 layout: post
-title: '🎸✨ Buon anno dai The Lizards! ✨🎸'
+title: "🎸✨ Buon anno dai The Lizards! ✨🎸"
 date: 2026-01-03
-description: 'I The Lizards vi aspettano per un 2026 ricco di musica, nuove storie e backstage. Leggi i nostri auguri e rimani con noi per le novità'
-image: /assets/images/posts/lizards.webp
+description: "I The Lizards vi aspettano per un 2026 ricco di musica, nuove storie e backstage. Leggi i nostri auguri e rimani con noi per le novità"
+image: /assets/images/posts/lizards_2026_01_03.webp
 ---
 
 ## I nostri auguri per il 2026
