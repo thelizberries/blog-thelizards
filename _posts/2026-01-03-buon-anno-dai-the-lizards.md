@@ -21,10 +21,10 @@ Non vediamo l’ora di condividere con voi tante nuove canzoni, frutto di mesi d
 ## Non solo musica: un cammino da fare insieme
 Quest’anno sarà all’insegna della musica nuova, delle sorprese e di tutto ciò che rende speciale il viaggio dei The Lizards.
 
-Restate sintonizzati: il 2026 sarà un anno da vivere… a tutto volume! 🔊🔥
+Restate sintonizzati: il 2026 sarà un anno da vivere... a tutto volume! 🔊🔥
 
 Con affetto e note infinite,
 
- The Lizards
+The Lizards
 
 **<a href="https://open.spotify.com/playlist/6pRJ3oABrfUZWnSIWq8Nu3?si=dKq7eEUERMKqscquGXmPSw&pi=aQP8wgMyQSCK6&nd=1&dlsi=af2682b7e3284a2e" target="_blank" rel="noopener" style="text-decoration: underline;"> In attesa dei nuovi brani ascolta la nostra playlist 🎧</a>**
