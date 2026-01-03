@@ -2,7 +2,7 @@
 layout: post
 title: '✨ Vuoi scoprire i retroscena del video “Strange Dream”? ✨'
 date: 2025-12-20
-description: ' Immergiti nei paesaggi suggestivi d’Irlanda nel viaggio che ha ispirato “Strange Dream” il nuovo singolo dei The Lizards durante la loro tournée - tributo ai T'
+description: 'Immergiti nei paesaggi suggestivi d’Irlanda nel viaggio che ha ispirato “Strange Dream” il nuovo singolo dei The Lizards durante la loro tournée - tributo ai The Cranberries'
 image: /assets/images/posts/elfo.webp
 ---
 
