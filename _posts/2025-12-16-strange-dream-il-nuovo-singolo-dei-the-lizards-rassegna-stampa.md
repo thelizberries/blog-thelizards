@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Strange Dream il nuovo singolo dei The Lizards: rassegna stampa'
+title: "Strange Dream: rassegna stampa del singolo"
 date: 2025-12-16
-description: 'Strange Dream è il nuovo singolo dei The Lizards: un brano rock intenso che racconta un percorso verso la luce, tra emozioni e introspezione.'
+description: "Strange Dream è il nuovo singolo dei The Lizards: un brano rock intenso che racconta un percorso verso la luce, tra emozioni e introspezione."
 image: /assets/images/posts/SD-copertina quadrata.webp
 ---
 
