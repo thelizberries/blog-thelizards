@@ -17,7 +17,7 @@ tenetevi pronti: tra qualche giorno manderemo **una nuova canzone** alla nostra 
 ## Il lancio a breve
 Un nuovo pezzo è pronto per essere sfornato e non vediamo l’ora di farvelo ascoltare.
 
- Preparatevi a scoprire sonorità fresche, energia pura e tutto il nostro spirito creativo che, come sempre, non deluderà.
+Preparatevi a scoprire sonorità fresche, energia pura e tutto il nostro spirito creativo che, come sempre, non deluderà.
 
 ## Un anno iniziato con le note giuste
 Restate sintonizzati: il 2026 dei The Lizards parte **a tutto volume!** 🔊💥
@@ -25,7 +25,7 @@ Con affetto e note esplosive,
 
 The Lizards
 
-Nel frattempo... Non dimenticate di seguirci sui social 
+Nel frattempo... non dimenticate di seguirci sui social 
 
 **<a href="https://www.facebook.com/TheLizardsMilano?locale=it_IT" target="_blank" rel="noopener" style="text-decoration: underline;">Facebook</a>**
 
