@@ -8,10 +8,12 @@ image: /assets/images/posts/The Lizards band.webp
 
 ## The Lizards ci sorprendono
 
-Cari amici,
 
-tenetevi pronti: tra qualche giorno manderemo **una nuova canzone** alla nostra casa discografica, **Sorry Mom!** 🎶✉️
 <!--more-->
+
+Cari amici,
+tenetevi pronti: tra qualche giorno manderemo **una nuova canzone** alla nostra casa discografica, **Sorry Mom!** 🎶✉️
+
 ## Il lancio a breve
 Un nuovo pezzo è pronto per essere sfornato e non vediamo l’ora di farvelo ascoltare.
 
@@ -23,9 +25,9 @@ Con affetto e note esplosive,
 
 The Lizards
 
-Nel frattempo……Non dimenticate di seguirci sui social 
+Nel frattempo... Non dimenticate di seguirci sui social 
 
-**<a href="urlhttps://www.facebook.com/TheLizardsMilano?locale=it_IT" target="_blank" rel="noopener" style="text-decoration: underline;">Facebook</a>**
+**<a href="https://www.facebook.com/TheLizardsMilano?locale=it_IT" target="_blank" rel="noopener" style="text-decoration: underline;">Facebook</a>**
 
-**<a href="urlhttps://www.instagram.com/thelizardsmilano/" target="_blank" rel="noopener" style="text-decoration: underline;">Instagram</a>**
+**<a href="https://www.instagram.com/thelizardsmilano/" target="_blank" rel="noopener" style="text-decoration: underline;">Instagram</a>**
 
