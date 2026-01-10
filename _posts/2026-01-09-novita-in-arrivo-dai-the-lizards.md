@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "🎸🔥 Novità in arrivo dai The Lizards! 🔥🎸"
+title: '🎸🔥 Novità in arrivo dai The Lizards! 🔥🎸'
 date: 2026-01-09
-description: "The Lizards annunciano l’uscita a breve del loro ultimo brano. Il 2026 inizierà con l’energia giusta!"
+description: 'The Lizards annunciano l’uscita a breve del loro ultimo brano. Il 2026 inizierà con l’energia giusta!'
 image: /assets/images/posts/The Lizards band.webp
 ---
 
