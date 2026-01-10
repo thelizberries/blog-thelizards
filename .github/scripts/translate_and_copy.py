@@ -204,8 +204,7 @@ for post in src_dir.glob("*.md"):
         
         # Leggi l'hash salvato nel post inglese
         en_text = existing_en_post.read_text(encoding="utf-8")
-        saved_hash_match = re.search(r'source_hash:\s*["\']?([^"\'
-]+)["\']?', en_text)
+        saved_hash_match = re.search(r'source_hash:\s*["\']?([^"\']+)["\']?', en_text)
         
         if saved_hash_match and saved_hash_match.group(1).strip() == current_hash:
             # Il contenuto non è cambiato, salta la traduzione
